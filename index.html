@@ -5,13 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>NabarakDev — дизайн и разработка</title>
   <meta name="description" content="Андрей, NabarakDev. Дизайн и разработка: сайты, мобильные интерфейсы, фирменный стиль и инструменты для данных. 12 лет в разработке ПО.">
-  <meta name="theme-color" content="#f5f4ef">
+  <meta name="theme-color" content="#001e30">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/portfolio-v2.css">
-  <script type="module" src="assets/portfolio-v2.mjs"></script>
+  <link rel="stylesheet" href="assets/portfolio-v3.css">
+  <script type="module" src="assets/portfolio-v3.mjs"></script>
 </head>
 <body id="top">
   <a class="skip-link" href="#main" data-copy="skip">К содержимому</a>
+  <div class="header-surface">
   <header class="site-header shell">
     <a class="wordmark" href="#top" aria-label="NabarakDev"><span class="brand-mark" aria-hidden="true">N/</span><span>Nabarak<span class="wordmark-light">Dev</span></span></a>
     <nav class="header-nav" aria-label="Главная навигация" data-copy-aria="navigation">
@@ -24,20 +25,23 @@
       <button type="button" data-lang="en" aria-pressed="false" aria-label="English">EN</button>
     </div>
   </header>
+  </div>
   <main id="main" tabindex="-1">
-    <section class="hero shell" aria-labelledby="hero-title">
+    <section class="hero-stage" aria-labelledby="hero-title">
+    <div class="hero shell">
       <div class="hero-copy">
         <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span><span data-copy="heroEyebrow">Андрей / независимый специалист</span></p>
         <h1 id="hero-title"><span data-copy="headline1">Идеи</span><span data-copy="headline2">обретают</span><em data-copy="headline3">форму.</em></h1>
         <p class="hero-intro" data-copy="heroIntro">Выразительный дизайн и продуманная разработка. Создаю сайты, приложения и цифровые материалы, в которых форма работает вместе с логикой.</p>
         <a class="hero-link" href="#work"><span data-copy="explore">Смотреть работы</span><span aria-hidden="true">↓</span></a>
       </div>
-      <div class="hero-art">
-        <div class="hero-art-top"><span>SELECTED / 01</span><span aria-hidden="true">✳</span></div>
-        <img src="assets/onda-website.png" width="1600" height="1200" alt="ONDA: интернет-магазин ухода за кожей, широкий и мобильный экраны в лавандовой палитре" data-copy-alt="heroAlt" fetchpriority="high">
-        <div class="hero-art-bottom"><span data-copy="heroArtLabel">ONDA / веб-дизайн</span><span>DESIGN + CODE</span></div>
-      </div>
+      <button class="hero-art" id="featured-project" type="button" aria-label="Смотреть работу" data-copy-aria="view">
+        <span class="hero-art-top"><span data-copy="heroSelected">В ФОКУСЕ / 01</span><span aria-hidden="true">↗</span></span>
+        <img id="hero-image" src="assets/orbit-interface-ru-v3.png" width="1600" height="1200" alt="ORBIT: три мобильных экрана с Сатурном, обзором неба и планом наблюдения в синей палитре" data-copy-alt="heroAlt" fetchpriority="high">
+        <span class="hero-art-bottom"><span data-copy="heroArtLabel">ORBIT / мобильный интерфейс</span><span data-copy="heroMediaType">UI / 3 ЭКРАНА</span></span>
+      </button>
       <div class="specialism-strip"><span data-copy="stripDesign">Дизайн</span><i aria-hidden="true">✳</i><span>iOS / Android / Flutter</span><i aria-hidden="true">✳</i><span data-copy="stripWeb">Веб-интерфейсы</span><i aria-hidden="true">✳</i><span data-copy="stripData">Данные и автоматизация</span></div>
+    </div>
     </section>
     <section class="work-section shell" id="work" aria-labelledby="work-title">
       <div class="section-heading"><div><p class="eyebrow" data-copy="workEyebrow">Визуальные решения. Работающие инструменты.</p><h2 id="work-title" data-copy="workTitle">Работы по направлениям.</h2></div><p class="section-note" data-copy="workIntro">Сайты и интерфейсы, айдентика и тексты. Выберите то, что ближе к вашей задаче.</p></div>
@@ -53,6 +57,18 @@
     <section class="contact-section" id="platforms" aria-labelledby="contact-title"><div class="shell contact-inner"><div><p class="eyebrow" data-copy="contactEyebrow">От вашей идеи — к следующему проекту.</p><h2 id="contact-title" data-copy="contactTitle">Давайте создадим что-то хорошее.</h2></div><div class="contact-actions"><p data-copy="contactIntro">Задачи и сотрудничество — в моих профилях на площадках.</p><a href="https://work-zilla.com/portfolio/wspwuu" target="_blank" rel="noopener noreferrer">Workzilla <span aria-hidden="true">↗</span></a><a href="https://insolvo.com/portfolio/sPhbbV" target="_blank" rel="noopener noreferrer">Insolvo <span aria-hidden="true">↗</span></a></div></div></section>
   </main>
   <footer class="site-footer shell"><a class="footer-wordmark" href="#top">NabarakDev</a><span data-copy="footerRole">Андрей / дизайн и разработка</span><a class="back-top" href="#top"><span data-copy="top">Наверх</span> ↑</a></footer>
-  <dialog class="project-dialog" id="project-dialog" aria-labelledby="dialog-title"><div class="dialog-bar"><span class="dialog-brand">NabarakDev / <span data-copy="projectLabel">работа</span></span><button type="button" class="dialog-close" id="dialog-close" aria-label="Закрыть просмотр" data-copy-aria="close"><span data-copy="close">Закрыть</span><span aria-hidden="true">×</span></button></div><div class="dialog-content" id="dialog-content"></div></dialog>
+  <dialog class="project-dialog" id="project-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-bar">
+      <span class="dialog-brand">NabarakDev / <span data-copy="projectLabel">работа</span></span>
+      <div class="dialog-controls">
+        <div class="language" role="group" aria-label="Язык сайта" data-copy-aria="language">
+          <button type="button" data-lang="ru" aria-pressed="true" aria-label="Русский">RU</button>
+          <button type="button" data-lang="en" aria-pressed="false" aria-label="English">EN</button>
+        </div>
+        <button type="button" class="dialog-close" id="dialog-close" aria-label="Закрыть просмотр" data-copy-aria="close"><span data-copy="close">Закрыть</span><span aria-hidden="true">×</span></button>
+      </div>
+    </div>
+    <div class="dialog-content" id="dialog-content"></div>
+  </dialog>
 </body>
 </html>
