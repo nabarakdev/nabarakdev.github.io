@@ -1,0 +1,21 @@
+@import url('./portfolio-v4.css');
+
+.project-card--product:nth-child(n) { grid-column: span 6; padding-top: 0; }
+.project-card--product .project-preview { background: #eae7e1; }
+.project-card--product .project-image { display: block; }
+.detail-media--product { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; align-items: start; }
+.detail-media--product .media-heading, .detail-media--product .detail-video { grid-column: 1 / -1; }
+.detail-media--product .media-heading { margin-bottom: 0; }
+.detail-media--product .detail-figure { margin: 0; min-width: 0; }
+.detail-media--product .detail-image { display: block; }
+.detail-media--product .fullsize-label { line-height: 1.5; }
+.detail-media--product .detail-video { max-width: 640px; width: 100%; margin: 18px auto 0; }
+.detail-media--product video { display: block; max-height: 75dvh; object-fit: contain; background: #081b27; }
+
+@media (max-width: 760px) {
+  .detail-media--product { grid-template-columns: 1fr; gap: 18px; }
+  .detail-media--product .detail-figure { max-width: 520px; width: 100%; margin-inline: auto; }
+}
+@media (max-width: 540px) {
+  .project-card--product:nth-child(n) { grid-column: auto; }
+}
