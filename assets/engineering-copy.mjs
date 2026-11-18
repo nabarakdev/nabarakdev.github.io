@@ -28,7 +28,7 @@ export const copy = {
     metric2: "в разработке ПО",
     metric3: "Большой опыт управления командами",
     metric3n: "Лидерство",
-    caseEyebrow: "02 / ГЛАВНЫЙ КЕЙС",
+    caseEyebrow: "01 / ГЛАВНЫЙ КЕЙС",
     caseTitle: "Одна ссылка в Jira.\nГотовый Merge Request.",
     caseIntro:
       "В многомодульном проекте написать код — только часть работы. Процесс должен найти владельца поведения, сохранить границы архитектуры, проверить изменение и подготовить его к публикации.",
@@ -64,7 +64,7 @@ export const copy = {
       "Описание MR связывает задачу, изменения и проверки. Статусы CI, слияния и приёмки отслеживаются отдельно.",
     ],
     demoArtifact: "Запустить воспроизводимый пример ↗",
-    workEyebrow: "01 / ОПЫТ ЗАПУСКА ПРОДУКТОВ",
+    workEyebrow: "02 / ОПЫТ ЗАПУСКА ПРОДУКТОВ",
     workTitle: "Архитектура проверяется\nреальной поставкой.",
     workIntro:
       "Мобильные продукты, которые команды разработали с нуля и запустили под моим техническим руководством.",
@@ -168,7 +168,7 @@ export const copy = {
     metric2: "in software engineering",
     metric3: "Extensive team management experience",
     metric3n: "Leadership",
-    caseEyebrow: "02 / FEATURED CASE",
+    caseEyebrow: "01 / FEATURED CASE",
     caseTitle: "One Jira link.\nA ready Merge Request.",
     caseIntro:
       "In a multi-module product, writing code is one part of delivery. The process must find the behaviour’s owner, preserve architectural boundaries, validate the change and prepare publication.",
@@ -197,7 +197,7 @@ export const copy = {
       "The MR description connects the task, changes and validation. CI, merge and acceptance remain separate states.",
     ],
     demoArtifact: "Run the reproducible example ↗",
-    workEyebrow: "01 / PRODUCT DELIVERY EXPERIENCE",
+    workEyebrow: "02 / PRODUCT DELIVERY EXPERIENCE",
     workTitle: "Architecture earns trust\nthrough delivery.",
     workIntro:
       "Mobile products developed from scratch and launched by teams under my technical leadership.",

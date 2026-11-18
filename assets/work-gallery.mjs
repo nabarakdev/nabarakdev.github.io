@@ -1,5 +1,16 @@
-import { projects, ondaCopy } from "./portfolio-data-v5.mjs";
+import {
+  projects as originalProjects,
+  ondaCopy,
+} from "./portfolio-data-v5.mjs";
 import { caseStories } from "./case-stories-v5.mjs";
+const appPriority = new Map([
+  ["tenge24", 0],
+  ["mbank", 1],
+  ["mts-belarus", 2],
+]);
+const projects = [...originalProjects].sort(
+  (a, b) => (appPriority.get(a.id) ?? 3) - (appPriority.get(b.id) ?? 3),
+);
 const words = {
   ru: {
     all: "Все работы",
