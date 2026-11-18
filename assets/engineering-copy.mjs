@@ -26,10 +26,10 @@ export const copy = {
     outputSub: "Diff · результаты проверок · связи MR",
     metric1: "рабочих пространства",
     metric2: "в разработке ПО",
-    metric3: "разработчиков в команде",
-    metric3n: "до 7",
+    metric3: "Большой опыт управления командами",
+    metric3n: "Лидерство",
     caseEyebrow: "01 / ГЛАВНЫЙ КЕЙС",
-    caseTitle: "Ссылка в Jira.\nУправляемая поставка.",
+    caseTitle: "Одна ссылка в Jira.\nГотовый Merge Request.",
     caseIntro:
       "В многомодульном проекте написать код — только часть работы. Процесс должен найти владельца поведения, сохранить границы архитектуры, проверить изменение и подготовить его к публикации.",
     caseBody:
@@ -166,10 +166,10 @@ export const copy = {
     outputSub: "Diff · validation results · related MRs",
     metric1: "workspaces",
     metric2: "in software engineering",
-    metric3: "developers on the team",
-    metric3n: "up to 7",
+    metric3: "Extensive team management experience",
+    metric3n: "Leadership",
     caseEyebrow: "01 / FEATURED CASE",
-    caseTitle: "A Jira link.\nControlled delivery.",
+    caseTitle: "One Jira link.\nA ready Merge Request.",
     caseIntro:
       "In a multi-module product, writing code is one part of delivery. The process must find the behaviour’s owner, preserve architectural boundaries, validate the change and prepare publication.",
     caseBody:
