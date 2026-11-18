@@ -1,0 +1,8 @@
+{
+  "key": "DEMO-001",
+  "url": "https://jira.example.test/browse/DEMO-001",
+  "title": "Prevent stale search responses from replacing current results",
+  "owner": "packages/search",
+  "allowedPaths": ["packages/search/search.mjs"],
+  "acceptanceCriteria": ["The latest requested query owns the visible state", "A failed newer request does not reactivate an older request", "The public search method remains unchanged"]
+}

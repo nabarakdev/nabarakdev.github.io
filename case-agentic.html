@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Jira → Merge Request — Agentic Delivery / Andrey Karaban</title>
+    <meta
+      name="description"
+      content="Кейс корпоративной агентской разработки. Архитектура процесса, роли агентов, контроль и воспроизводимый учебный пример."
+    />
+    <meta name="theme-color" content="#111720" />
+    <meta
+      property="og:title"
+      content="Jira → Merge Request — Agentic Delivery / Andrey Karaban"
+    />
+    <meta
+      property="og:description"
+      content="Кейс корпоративной агентской разработки. Архитектура процесса, роли агентов, контроль и воспроизводимый учебный пример."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://nabarakdev.github.io/assets/social-agentic.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/favicon.svg" />
+    <link rel="stylesheet" href="assets/engineering.css" />
+    <script type="module" src="assets/engineering.mjs"></script>
+  </head>
+  <body data-page="case">
+    <a class="skip-link" href="#main">Skip to content / К содержимому</a>
+    <header class="site-header wrap">
+      <a class="brand" href="index.html"
+        ><span class="brand-symbol">a<span>k</span>.</span
+        ><span class="brand-name"
+          >ANDREY KARABAN<small>SOFTWARE ARCHITECT</small></span
+        ></a
+      >
+      <nav aria-label="Main navigation">
+        <a href="index.html#portfolio"
+          ><span data-i18n="navAll">Все работы</span></a
+        >
+        <a href="case-agentic.html"
+          ><span data-i18n="navCase">Кейс автоматизации</span></a
+        ><a href="index.html#experience"
+          ><span data-i18n="navWork">Опыт</span></a
+        ><a href="#contact"><span data-i18n="navContact">Контакты</span></a>
+      </nav>
+      <div class="lang" role="group" aria-label="Language">
+        <button data-lang="ru" aria-pressed="true">RU</button
+        ><button data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </header>
+    <main id="main">
+      <section class="case-hero wrap">
+        <a class="quiet-link" href="index.html"
+          ><span data-i18n="caseBack">← На главную</span></a
+        >
+        <p class="eyebrow">CASE STUDY / 001</p>
+        <h1 data-i18n="casePageTitle">От ссылки в Jira<br />до готового MR.</h1>
+        <p data-i18n="casePageIntro" class="case-intro">
+          Архитектура корпоративной агентской разработки: контекст, модули,
+          агенты, проверки и управляемая публикация. Автор процесса — Андрей
+          Карабань.
+        </p>
+        <p data-i18n="caseScope" class="mono">
+          Последний год · 3 рабочих пространства · многомодульные мобильные
+          продукты
+        </p>
+      </section>
+      <section class="case-context wrap">
+        <article>
+          <h2 data-i18n="caseProblem">Задача системы</h2>
+          <p data-i18n="caseProblemBody">
+            Задача в трекере редко содержит всю инженерную картину. Требования,
+            API, дизайн и зависимости находятся в разных источниках. Изменение
+            может затронуть несколько репозиториев, каждый со своими правилами и
+            циклом публикации.
+          </p>
+        </article>
+        <article>
+          <h2 data-i18n="caseOwnership">Что спроектировал я</h2>
+          <p data-i18n="caseOwnershipBody">
+            Требования к процессу, общие правила, границы модулей и полномочий,
+            распределение ролей, handoff между этапами, подключение MCP и CLI,
+            проверки и порядок согласований. Постоянное ревью результатов
+            использовал для совершенствования системы.
+          </p>
+        </article>
+      </section>
+      <section class="case-arch wrap">
+        <div class="section-heading">
+          <p class="eyebrow">SYSTEM DESIGN</p>
+          <div>
+            <h2 data-i18n="archTitle">
+              Контекст превращается<br />в ограниченную задачу.
+            </h2>
+            <p data-i18n="archBody" class="section-intro">
+              Оркестрация собирает нужные источники, определяет владельца
+              поведения и выбирает маршрут по риску. Один активный исполнитель
+              изменяет рабочую копию; проверки и замечания привязаны к
+              конкретной ревизии.
+            </p>
+          </div>
+        </div>
+        <div class="layers">
+          <article>
+            <span class="mono">01</span>
+            <h3 data-layer="0">Источники</h3>
+            <p data-layer-body="0">
+              Jira · спецификации · API · дизайн · карта зависимостей
+            </p>
+          </article>
+          <article>
+            <span class="mono">02</span>
+            <h3 data-layer="1">Оркестрация</h3>
+            <p data-layer-body="1">
+              Контекст · правила · Skills · маршрутизация по риску · handoff
+            </p>
+          </article>
+          <article>
+            <span class="mono">03</span>
+            <h3 data-layer="2">Исполнение</h3>
+            <p data-layer-body="2">
+              Исполнитель · независимый review по риску · тесты · анализатор
+            </p>
+          </article>
+          <article>
+            <span class="mono">04</span>
+            <h3 data-layer="3">Результат</h3>
+            <p data-layer-body="3">
+              Diff · проверки · описание MR · согласование публикации · CI
+            </p>
+          </article>
+        </div>
+        <section class="workflow-demo" aria-labelledby="demo-title">
+          <div class="demo-top">
+            <span class="mono" id="demo-title"
+              ><span data-i18n="demoLabel">ИНТЕРАКТИВНАЯ СХЕМА</span></span
+            ><span class="demo-indicator">● DEMO-001</span>
+          </div>
+          <div class="step-controls" role="group" aria-label="Workflow stages">
+            <button type="button" data-step="0" aria-pressed="true">
+              <span>01</span><b data-step-label="0">Задача</b></button
+            ><button type="button" data-step="1" aria-pressed="false">
+              <span>02</span><b data-step-label="1">Контекст</b></button
+            ><button type="button" data-step="2" aria-pressed="false">
+              <span>03</span><b data-step-label="2">Изменение</b></button
+            ><button type="button" data-step="3" aria-pressed="false">
+              <span>04</span><b data-step-label="3">Проверки</b></button
+            ><button type="button" data-step="4" aria-pressed="false">
+              <span>05</span><b data-step-label="4">Согласование</b></button
+            ><button type="button" data-step="5" aria-pressed="false">
+              <span>06</span><b data-step-label="5">MR</b>
+            </button>
+          </div>
+          <div class="step-detail" aria-live="polite">
+            <h3 id="step-title">01 / Прочитать задачу</h3>
+            <p id="step-body">
+              Из ссылки на Jira извлекаются требования и критерии приёмки.
+              Неясности разрешаются до изменения кода.
+            </p>
+            <div class="terminal-line">
+              <span>→</span
+              ><code id="step-code">task: DEMO-001 / status: intake</code>
+            </div>
+          </div>
+          <p data-i18n="demoNote" class="demo-note">
+            Учебный сценарий. Переключение этапов показывает процесс, а не
+            запускает агентов или подключение к Jira.
+          </p>
+          <a
+            class="text-link light"
+            href="https://github.com/nabarakdev/nabarakdev.github.io/tree/main/cases/agentic-delivery/demo"
+            ><span data-i18n="demoArtifact"
+              >Запустить воспроизводимый пример ↗</span
+            ></a
+          >
+        </section>
+      </section>
+      <section class="proof wrap">
+        <div>
+          <p class="eyebrow">REPRODUCIBLE EXAMPLE</p>
+          <h2 data-i18n="proofTitle">
+            Показать работу.<br />Не обещать проценты.
+          </h2>
+          <p data-i18n="proofBody" class="section-intro">
+            В репозитории есть исполняемый учебный пример: воспроизведение
+            ошибки поиска, ограниченное исправление в пакете, реальные тесты и
+            подготовка описания MR. Он демонстрирует локальную часть поставки на
+            вымышленных данных. Корпоративные интеграции Jira / GitLab и
+            агентный runtime в этот пример не входят.
+          </p>
+        </div>
+        <div class="code-panel">
+          <p class="mono">
+            <span data-i18n="proofCommand">Запуск из корня репозитория</span>
+          </p>
+          <pre><code>node cases/agentic-delivery/demo/run.mjs
+
+node cases/agentic-delivery/demo/run.mjs \
+  --approve-implementation</code></pre>
+          <p data-i18n="proofFoot">
+            Node.js 20+. Внешние аккаунты, ключи и доступ к корпоративным
+            проектам не нужны. Вывод сохраняется в локальный каталог
+            .demo-output, который исключён из Git.
+          </p>
+          <a
+            class="text-link light"
+            href="https://github.com/nabarakdev/nabarakdev.github.io/tree/main/cases/agentic-delivery/demo"
+            ><span data-i18n="demoArtifact"
+              >Запустить воспроизводимый пример ↗</span
+            ></a
+          >
+        </div>
+      </section>
+      <figure class="validation-figure wrap">
+        <img
+          src="cases/agentic-delivery/assets/validation.svg"
+          width="1000"
+          height="360"
+          alt="Synthetic regression: baseline 1 passing and 3 failing tests; fixed 4 passing tests"
+        />
+        <figcaption data-i18n="chartCaption">
+          Фактические результаты учебного примера. Корпоративные KPI не
+          измерялись.
+        </figcaption>
+      </figure>
+      <section class="principles wrap">
+        <article>
+          <span class="mono">01</span>
+          <h3 data-i18n="principle1">Проверяемые утверждения</h3>
+          <p data-i18n="principle1body">
+            Локальные проверки, CI, runtime и приёмка — разные результаты. Отчёт
+            не подменяет реальное выполнение.
+          </p>
+        </article>
+        <article>
+          <span class="mono">02</span>
+          <h3 data-i18n="principle2">Контроль без ручной рутины</h3>
+          <p data-i18n="principle2body">
+            Автоматизированы повторяемые этапы. Инженер может проверить или
+            остановить процесс на любом этапе.
+          </p>
+        </article>
+        <article>
+          <span class="mono">03</span>
+          <h3 data-i18n="principle3">Границы публикации</h3>
+          <p data-i18n="principle3body">
+            Доступ к задаче не равен разрешению менять код. Готовое изменение не
+            равно разрешению публиковать или сливать MR.
+          </p>
+        </article>
+      </section>
+      <div class="wrap docs-link">
+        <a
+          class="button"
+          href="https://github.com/nabarakdev/nabarakdev.github.io/tree/main/cases/agentic-delivery"
+          ><span data-i18n="caseMore"
+            >Читать документацию и Mermaid-диаграммы ↗</span
+          ></a
+        >
+      </div>
+      <section id="contact" class="contact wrap">
+        <div>
+          <p class="eyebrow">
+            <span data-i18n="contactEyebrow">СЛЕДУЮЩИЙ ЭТАП</span>
+          </p>
+          <h2 data-i18n="contactTitle">
+            Давайте автоматизируем<br />вашу разработку.
+          </h2>
+          <p class="contact-copy">
+            <span data-i18n="contactBody"
+              >Приоритет — агентские системы, автоматизация и архитектура.
+              Рассматриваю также Software Architect и Mobile Lead. Удалённо;
+              офис и гибрид — Минск. Английский — B1.</span
+            >
+          </p>
+        </div>
+        <div class="contact-links">
+          <a
+            href="https://www.linkedin.com/in/andrey-karaban-18384340b/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn <span>↗</span></a
+          ><a
+            href="https://github.com/nabarakdev"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub <span>↗</span></a
+          ><a class="secondary-link" href="creative.html"
+            ><span data-i18n="archive">Дизайн и другие работы ↗</span></a
+          >
+        </div>
+      </section>
+    </main>
+    <footer class="wrap">
+      <span><span data-i18n="footer">Андрей Карабань · NabarakDev</span></span
+      ><span>MINSK, BY · © 2026</span><a href="#main">↑</a>
+    </footer>
+    <noscript
+      ><p class="wrap">
+        Основной материал доступен без JavaScript. Для переключения языка и
+        интерактивной схемы включите JavaScript.
+      </p></noscript
+    >
+  </body>
+</html>
